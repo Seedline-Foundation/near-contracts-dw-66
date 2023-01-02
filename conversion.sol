@@ -1,3 +1,16 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import './ChainlinkConversionPath.sol';
+import './interfaces/ERC20FeeProxy.sol';
+import '@openzeppelin/contracts/access/Ownable.sol';
+
+/**
+ * @title Conversion
+ * @notice This contract convert from chainlink then swaps ERC20 tokens
+ *         before paying a request thanks to a conversion payment proxy
+ */
+
 use ink_lang as ink;
 
 use near_sdk::{
